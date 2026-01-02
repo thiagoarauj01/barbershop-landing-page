@@ -1,0 +1,66 @@
+:root{
+    --primary-normal: #06121E;
+    --primary-dark: #040f1a;
+    --primary-light: #0c2135;
+
+    --secondary-normal: #090d11;
+    --secondary-dark: #06090c;
+    --secondary-light: #1a1f25;
+
+    --black-normal: #232224;
+    --black-dark: #161617;
+    --black-light: #353436;
+
+    --white-normal: #ffffff;
+    --white-light: ##fefbff;
+
+    --red-normal: #D94140;
+    --red-dark: #b42b2b;
+    --red-light: #d34040;
+}
+
+@import url('header.css');
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    outline: 0px;
+}
+
+body{
+    font-family: 'Sora', sans-serif;
+    
+    width: 100%; /*largura inteira*/
+
+    height: 100vh; /*altura inteira*/
+
+    position: relative; /*permite mover um elemento levemente da sua posição normal sem bagunçar o resto da página. Você pode ajustá-lo para cima, baixo, esquerda ou direita.*/
+
+    background-color: var(--primary-normal);
+}
+
+button{
+    font-family: 'Sora', sans-serif;
+
+    cursor: pointer; /*faz com que o cursor do mouse vire uma mãozinha ao passar sobre o elemento, indicando que ele é clicável, como um botão ou um link.*/
+}
+
+svg{
+    width: 100%; /*imagem 100% do site e com boa qualidade*/
+}
+
+img{
+    width: 100%; /*imagem 100% do site e com boa qualidade*/
+}
+
+a{
+    cursor: pointer; /*faz com que o cursor do mouse vire uma mãozinha ao passar sobre o elemento, indicando que ele é clicável, como um botão ou um link.*/
+
+    text-decoration: none; /*tirar sublinado da palavra*/
+}
+
+
+
+
+

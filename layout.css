@@ -1,0 +1,358 @@
+.container{
+    max-width: 1440px; /* Define a largura máxima do elemento como 1440px, evitando que ele fique muito largo em telas grandes */
+
+    margin: 0 auto; /* Centraliza o elemento horizontalmente, mantendo 0 de margem no topo e na base */
+
+    padding: 0px 8px;
+}
+
+.bg-home{
+    position: relative; /* Mantém o elemento no fluxo normal, mas permite ajustes */
+}
+
+.bg-home::before{
+    content: '';  /* Necessário para pseudo-elementos (::before ou ::after), cria um elemento vazio */
+
+    display: block; /* Faz o elemento se comportar como um bloco, ocupando toda a largura disponível */
+
+    position: absolute; /* Posiciona o elemento de forma absoluta em relação ao ancestral com position: relative (se houver) */
+
+    background-image: linear-gradient(to bottom, rgba(6, 18, 30, 0.1), #06121e), url('imagens/bg.svg')
+    /* Imagem de fundo principal */;
+
+    left: 0; /* Alinha o elemento à esquerda da tela/pai */
+
+    top: 0; /* Alinha o elemento ao topo da tela/pai */
+
+    width: 100%;/* Faz o elemento ocupar toda a largura do elemento pai */
+
+    height: 100%; /* Faz o elemento ocupar toda a altura do elemento pai */
+
+    z-index: -1; /* Coloca o elemento atrás dos outros, útil para fundos */
+
+    background-size: cover; /* Faz a imagem de fundo cobrir todo o elemento, sem distorcer */
+
+    background-repeat: no-repeat; /* Impede a repetição da imagem de fundo */
+
+    background-position: 50% 0; /* Centraliza a imagem de fundo horizontalmente (50%)  
+    e a posiciona no topo verticalmente (0). */
+
+    opacity: 0.9;  /* Define a opacidade do elemento para 90% */
+}
+
+
+/*Main*/
+.hero {
+    /* Define a cor do texto dentro do container .hero como branco */
+    color: white; 
+
+    /* Define a altura mínima do container .hero como 80% da altura da tela */
+    min-height: 80vh; 
+
+    /* Utiliza flexbox para o layout do .hero */
+    display: flex;
+
+    /* Organiza os elementos filhos em uma coluna */
+    flex-direction: column;
+
+    /* Alinha os itens filhos no centro horizontalmente */
+    align-items: center;
+
+    /* Alinha os itens filhos no centro verticalmente */
+    justify-content: center;
+
+    /* Adiciona um padding de 14px ao redor do container */
+    padding: 14px; 
+
+    h1 {
+        /* Alinha o título (h1) ao centro */
+        text-align: center;
+
+        /* Define a altura da linha do título como 150% da altura da linha normal */
+        line-height: 150%; 
+
+        /* Define a largura máxima do título como 940px */
+        max-width: 940px;
+
+        /* Define o tamanho da fonte do título como 46px */
+        font-size: 46px; 
+    }
+
+    p {
+        /* Alinha o parágrafo ao centro */
+        text-align: center;
+
+        /* Define as margens superior e inferior do parágrafo como 14px */
+        margin: 14px 0px;
+    }
+}
+
+.button-contact {
+    /* Define o padding do botão com 14px em cima e embaixo, e 28px à esquerda e direita */
+    padding: 14px 28px;
+
+    /* Define a cor do texto do botão como branco */
+    color: white;
+
+    /* Define a cor de fundo do botão como vermelha */
+    background-color: red;
+
+    /* Remove a borda do botão */
+    border: 0;
+
+    /* Define o tamanho da fonte do botão como 18px */
+    font-size: 18px;
+
+    /* Define o peso da fonte do botão como 600 (semi-negrito) */
+    font-weight: 600;
+
+    /* Define uma margem de 14px em cima e embaixo do botão */
+    margin: 14px 0;
+}
+
+.button-contact:hover {
+    /* Quando o botão for passado sobre (hover), aplica a animação chamada "scaleButton" com duração de 0.8s, sendo repetida infinitamente em alternância */
+    animation: scaleButton 0.8s infinite alternate;
+}
+
+@keyframes scaleButton {
+    /* Define a animação "scaleButton", que altera o tamanho do botão */
+    from {
+        /* Começa a animação com o botão no tamanho original (escala 1) */
+        transform: scale(1); 
+    }
+
+    to {
+        /* Termina a animação aumentando o tamanho do botão para 1.07x */
+        transform: scale(1.07);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    /* Para telas com largura de 768px ou menos (tablets e alguns dispositivos móveis), ajusta os estilos */
+    .hero {
+        /* Ajusta a altura mínima do .hero para 60% da altura da tela */
+        min-width: 60vh; 
+
+        h1 {
+            /* Reduz o tamanho da fonte do título para 34px */
+            font-size: 34px;
+
+            /* Adiciona padding de 14px nas laterais do título */
+            padding: 0 14px;
+
+            /* Faz o título ocupar 100% da largura disponível */
+            width: 100%;
+        }
+
+        p {
+            /* Reduz o tamanho da fonte do parágrafo para 14px */
+            font-size: 14px;
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    /* Para telas com largura de 480px ou menos (smartphones), ajusta os estilos */
+    .hero h1 {
+        /* Reduz ainda mais o tamanho da fonte do título para 24px */
+        font-size: 24px;
+    }
+}
+
+
+/*Sobre*/
+
+.about{
+    background-color: #06121E;
+    overflow: hidden;
+    color: white;
+}
+
+.about-img {
+    max-width: 315px;
+    display: inline;
+    display: flex;
+}
+
+.img01 , .img02 , .img03, .img04{
+    margin-right: 50px;
+    border-radius: 10px;
+}
+
+.description{
+    padding-top: 50px;
+    text-align: left;
+    text-align: justify;
+    padding-left: 60px;
+    padding-right: 60px;
+}
+
+.sobre{
+    font-size: 38px;
+    padding-top: 100px;
+    text-align: center;
+}
+
+.clock{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    text-align: center;
+}
+
+/*Serviços*/
+
+.services{
+    background-color: white;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 54px 14px;
+}
+
+.services-content > h2{
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 38px;
+    margin-bottom: 14px;
+}
+
+.services-content > p{
+    line-height: 150%;
+    margin-bottom: 14px;
+    text-align: center;
+    max-width: 780px;
+}
+
+.haircuts{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    padding: 0 44px 34px 44px;
+}
+
+.haircut{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    border-radius: 8px;
+
+    box-shadow: 0px -1px 17px -4px rgba(0,0,0,0.45);
+
+    overflow: hidden;
+
+}
+
+.img-haircut{
+    width: 100%;
+    max-width: 354px;
+    transition: 0.2s;
+}
+
+.haircut img:hover{
+    transform: scale(1.2);
+    z-index: 1;
+}
+
+.haircuts-info{
+    width: 100%;
+    display: flex;
+    justify-content:space-between;
+    padding: 14px;
+    background-color: #ffffff;
+    z-index: 99;
+}
+
+.haircuts-info button{
+    background-color: #D94140;
+    border-radius: 4px;
+    padding: 4px 8px;
+    border: 0;
+    cursor: default;
+}
+
+@media screen and (max-width: 768px) {
+    .haircuts{
+        flex-direction: column;
+    }
+
+    .haircut img{
+        max-width: 740px;
+    }
+}
+
+/*mapa*/
+
+.map{
+    width: 100%;
+}
+
+
+/*footer*/
+
+.footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 54px 0px;
+    gap: 24px;
+    color: #ffffff;
+}
+
+.footer-icons{
+    display: flex;
+    gap: 8px;
+    color: #ffffff;
+}
+
+/*Botão Whatsapp*/
+
+.btn-whatsapp{
+    position: fixed;
+    bottom: 14px;
+    right: 24px;
+    z-index: 99;
+}
+
+.btn-whatsapp > img{
+    max-width: 74px;
+    transition: 0.4s;
+}
+
+.btn-whatsapp > img:hover{
+    transform: scale(1.1);
+}
+
+.btn-whatsapp .tooltip-text{
+    visibility: hidden;
+    position: absolute;
+    width: 120px;
+    top: 8px;
+    left: -144px;
+    background-color: #232224;
+    color: #ffffff;
+    border-radius: 8px;
+    padding: 6px;
+    text-align: center;
+    opacity: 0;
+    transition: 0.4s;
+}
+
+.btn-whatsapp:hover .tooltip-text{
+    visibility: visible;
+    opacity: 1;
+}
+
+@media screen and (max-width: 768px ) {
+    .btn-whatsapp > img{
+        max-width: 64px;
+    }
+}
+
+
+
