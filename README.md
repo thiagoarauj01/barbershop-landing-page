@@ -9,7 +9,7 @@ Esta landing page apresenta a identidade visual da barbearia, descreve serviços
 
 Demo
 ----
-- Link da demo: [INSIRA_AQUI_O_LINK_DA_DEMO]
+- Link da demo: [https://barbershop-landing-page-sandy.vercel.app/]
 
 Screenshots
 -----------
